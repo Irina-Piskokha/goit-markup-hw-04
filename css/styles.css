@@ -141,7 +141,7 @@ button {
     display: flex;
 }
 
-.menu-link a {
+.menu-link-det {
     color: var(--title-color);
     font-weight: 500;
     padding: 24px 0;
@@ -149,19 +149,27 @@ button {
 
 .menu-link {
     padding: 24px 0;
+    position: relative;
  }
 
 .menu-link:not(:last-child) {
     margin-right: 40px;
 }
 
-.menu-link a:hover,
-.menu-link a:focus {
+.current {
     color: var(--link-hover);
-    border-bottom: 4px solid var(--link-hover);
+}
+
+.current::after {
+    display: block;
+    content: '';
     width: 100%;
-    padding-top: 20px;
-    border-radius: 2px 2px;
+    background-color: var(--link-hover);
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .adress-list {
@@ -175,11 +183,14 @@ button {
 
 .adress-link {
     padding: 24px 0;
+    transition-property: color;
 }
 
 .adress-link-email:hover,
 .adress-link-email:focus {
     color: var(--link-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========== /HEADER ========== */
@@ -225,12 +236,15 @@ button {
     border: 0;
     min-width: 169px;
     cursor: pointer;
+    transition-property: background-color;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     cursor: pointer;
     background-color: var(--link-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ========== /HERO ========== */
 
@@ -301,15 +315,14 @@ button {
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
-    box-shadow:
-    0px 2px 1px 0 #2E2F42,
-    0px 1px 6px 0 #2E2F45,
-    0px 1px 1px 0 #2E2F42;
-    
+    box-shadow: 
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.team-div {
-    padding: 32px 0;
+.team-wrap {
+    padding-top: 32px;
 }
 
 .team-title {
@@ -321,13 +334,85 @@ button {
     text-align: center;
 }
 
+.team-social {
+    display: flex;
+    gap: 24px;
+    padding: 8px 16px 32px 16px;
+}
+
+.team-social-list {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--main-background-color);
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+}
+
+.team-social-list:hover {
+    background-color: var(--link-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-icon {
+    fill: #fff;
+}
+
 /* ========== /TEAM ========== */
 
+/* ========== CUSTOMERS ========== */
+.customers {
+    padding: 120px 0;
+}
+
+.customers-title {
+    margin-bottom: 72px;
+}
+
+.customers-list {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.customers-link {
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    padding: 16px 32px;
+    transition-property: border;
+}
+
+.customers-link-icon {
+    fill: #8E8F99;
+    transition-property: fill;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid var(--link-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.customers-link:hover .customers-link-icon,
+.customers-link:focus .customers-link-icon {
+    fill: var(--link-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== /CUSTOMERS ========== */
 
 /* ========== FOOTER ========== */
 .footer {
     background-color: var(--title-color);
     padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
 }
 
 .footer-text {
