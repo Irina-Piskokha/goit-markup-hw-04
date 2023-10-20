@@ -21,10 +21,10 @@
 <body>
     <!-- HEADER -->
     <header id="header" class="header">
-        <div class="container flex flex-content">
-            <nav class="main-nav flex">
+        <div class="container flex-content">
+            <nav class="main-nav">
                 <a href="./index.html" class="logo link">Web<span class="header-logo-span">Studio</span></a>
-                <ul class="menu list flex">
+                <ul class="menu list">
                     <li class="menu-link">
                         <a href="./index.html" class="link">Studio</a>
                     </li>
@@ -37,9 +37,9 @@
                 </ul>
             </nav>
             <address class="adress">
-                <ul class="adress-list list flex">
+                <ul class="adress-list list">
                     <li class="adress-link">
-                        <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+                        <a href="mailto:info@devstudio.com" class="adress-link-email link">info@devstudio.com</a>
                     </li>
                     <li class="adress-link">
                         <a href="tel:+110001111111" class="link link-phone">+11 (000) 111-11-11</a>
@@ -50,38 +50,58 @@
     </header>
     <!-- /HEADER -->
     <main>
-        <!-- MAIN TITLE -->
-        <section class="head">
+        <!-- HERO -->
+        <section class="hero">
             <div class="container">
-                <h1 class="head-title">Effective Solutions for Your Business</h1>
-                <button type="button" class="head-btn">Order Service</button>
+                <h1 class="hero-title">Effective Solutions for Your Business</h1>
+                <button type="button" class="hero-btn">Order Service</button>
             </div>
         </section>
-        <!-- /MAIN TITLE -->
+        <!-- /HERO -->
         <!-- ABOUT -->
         <section class="about">
             <div class="container">
                 <h2 class="about-main-title section-title visually-hidden">About</h2>
-                <ul class="about-main-list list flex">
+                <ul class="about-main-list list">
                     <li class="about-list">
+                        <div class="about-list-wrapper">
+                            <svg class="about-list-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-antenna"></use>
+                            </svg>
+                        </div>
                         <h3 class="about-title title-name">Strategy</h3>
                         <p class="about-text text">
                             Our goal is to identify the business problem to walk away with the perfect and creative solution.
                         </p>
                     </li>
                     <li class="about-list">
+                        <div class="about-list-wrapper">
+                            <svg class="about-list-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-clock"></use>
+                            </svg>
+                        </div>
                         <h3 class="about-title title-name">Punctuality</h3>
                         <p class="about-text text">
                             Bring the key message to the brand's audience for the best price within the shortest possible time.
                         </p>
                     </li>
                     <li class="about-list">
+                        <div class="about-list-wrapper">
+                            <svg class="about-list-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-diagram"></use>
+                            </svg>
+                        </div>
                         <h3 class="about-title title-name">Diligence</h3>
                         <p class="about-text text">
                             Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
                         </p>
                     </li>
                     <li class="about-list">
+                        <div class="about-list-wrapper">
+                            <svg class="about-list-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-astronaut"></use>
+                            </svg>
+                        </div>
                         <h3 class="about-title title-name">Technologies</h3>
                         <p class="about-text text">
                             Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
@@ -95,7 +115,7 @@
         <section class="what">
             <div class="container">
                 <h2 class="what-main-title section-title">What are we doing</h2>
-                <ul class="what-main list flex">
+                <ul class="what-main list">
                     <li class="what-list">
                         <img src="./images/doin/computer.jpg" alt="computer" width="360" height="300">
                     </li>
@@ -113,7 +133,7 @@
         <section class="team">
             <div class="container">
                 <h2 class="team-main-title section-title">Our Team</h2>
-                <ul class="team-main-list list flex">
+                <ul class="team-main-list list">
                     <li class="team-list">
                         <img src="./images/team/guerrero.jpg" alt="Mark Guerrero" width="264" height="260" class="team-img">
                         <div class="team-div">

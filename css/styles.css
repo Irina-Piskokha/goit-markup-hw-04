@@ -58,6 +58,10 @@ ul {
     padding: 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -70,11 +74,6 @@ ul {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
-.flex {
-    display: flex;
-}
-
 
 /* ========== COMPONENTS ========== */
 
@@ -129,11 +128,17 @@ ul {
 }
 
 .flex-content {
+    display: flex;
     justify-content: space-between;
 }
 
 .main-nav {
+    display: flex;
     align-items: center;
+}
+
+.menu {
+    display: flex;
 }
 
 .menu-link a {
@@ -153,9 +158,14 @@ ul {
 .menu-link a:hover,
 .menu-link a:focus {
     color: var(--link-hover);
+    border-bottom: 4px solid var(--link-hover);
+    width: 100%;
+    padding-top: 20px;
+    border-radius: 2px 2px;
 }
 
 .adress-list {
+    display: flex;
     gap: 40px;
 }
 
@@ -167,20 +177,28 @@ ul {
     padding: 24px 0;
 }
 
-.adress-link a:hover,
-.adress-link a:focus {
+.adress-link-email:hover,
+.adress-link-email:focus {
     color: var(--link-hover);
 }
 
 /* ========== /HEADER ========== */
-/* ========== MAIN TITLE ========== */
+/* ========== HERO ========== */
 
-.head {
+.hero {
     background-color: var(--title-color);
+    background-image:
+    linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
+    url(../images/hero/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     padding: 188px 0;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.head-title {
+.hero-title {
     color: #fff; 
     font-size: 56px;
     font-weight: 700;
@@ -192,7 +210,7 @@ ul {
     margin: 0 auto;
 }
 
-.head-btn {
+.hero-btn {
     color: #fff;
     background-color: var(--main-background-color);
     font-size: 16px;
@@ -209,12 +227,12 @@ ul {
     cursor: pointer;
 }
 
-.head-btn:hover,
-.head-btn:focus {
+.hero-btn:hover,
+.hero-btn:focus {
     cursor: pointer;
     background-color: var(--link-hover);
 }
-/* ========== /MAIN TITLE ========== */
+/* ========== /HERO ========== */
 
 /* ========== ABOUT ========== */
 
@@ -223,6 +241,7 @@ ul {
 }
 
 .about-main-list {
+    display: flex;
     gap: 24px;
 }
 
@@ -233,6 +252,14 @@ ul {
 .about-list {
     width: 264px;
 }
+
+.about-list-wrapper {
+    padding: 24px 100px;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
 /* ========== /ABOUT ========== */
 
 
@@ -247,6 +274,7 @@ ul {
 }
 
 .what-main {
+    display: flex;
     gap: 24px;
 }
 
@@ -265,6 +293,7 @@ ul {
 }
 
 .team-main-list {
+    display: flex;
     gap: 24px;
 }
 
@@ -272,7 +301,11 @@ ul {
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
-    box-shadow: 0px 1px 6px -3px #2E2F42;
+    box-shadow:
+    0px 2px 1px 0 #2E2F42,
+    0px 1px 6px 0 #2E2F45,
+    0px 1px 1px 0 #2E2F42;
+    
 }
 
 .team-div {
@@ -321,6 +354,7 @@ ul {
 
 .portfolio-nav {
     margin-bottom: 72px;
+    display: flex;
     justify-content: center;
 }
 
@@ -366,6 +400,7 @@ ul {
 }
 
 .portfolio-works {
+    display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
