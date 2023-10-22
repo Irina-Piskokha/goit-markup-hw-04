@@ -115,6 +115,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.32px;
 }
+
+
 /* ========== /COMPONENTS ========== */
 
 /* ========== HEADER ========== */
@@ -405,32 +407,6 @@ button {
 
 /* ========== /CUSTOMERS ========== */
 
-/* ========== FOOTER ========== */
-.footer {
-    background-color: var(--title-color);
-    padding: 100px 0;
-}
-
-.footer-container {
-    display: flex;
-}
-
-.footer-text {
-    color: #F4F4FD; 
-    width: 264px;
-}
-
-.footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
-.footer-span-logo {
-    color: #F4F4FD;
-}
-
-/* ========== /FOOTER ========== */
-
 /* ========== PORTFOLIO ========== */
 
 .portfolio {
@@ -454,6 +430,7 @@ button {
     border: 1px solid #E7E9FC;
     padding: 12px 24px;
     border-radius: 4px;
+    transition-property: background-color, color, border;
 }
 
 .portfolio-list:not(:last-child) {
@@ -462,10 +439,11 @@ button {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-    cursor: pointer;
     background-color: var(--link-hover);
     color: #fff;
     border: 1px solid transparent;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-div {
@@ -495,5 +473,95 @@ button {
     width: calc((100% - 48px) / 3)
 }
 
+.overlay-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-works-link:hover .overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    transform: translatey(-100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    background-color: var(--main-background-color);
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.overlay-text {
+    color: #F4F4FD;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0.32px;
+    padding: 40px 32px 164px 32px;
+}
+
 
 /* ========== /PORTFOLIO ========== */
+
+/* ========== FOOTER ========== */
+.footer {
+    background-color: var(--title-color);
+    padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-content {
+    margin-right: 120px;
+}
+
+.footer-text {
+    color: #F4F4FD;
+    width: 264px;
+}
+
+.footer-social-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.footer-social-wrap {
+    display: flex;
+    gap: 16px;
+}
+
+.icons-social-list {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--main-background-color);
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+}  
+
+.icons-social-list:hover {
+    background-color: #31D0AA;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-span-logo {
+    color: #F4F4FD;
+}
+
+/* ========== /FOOTER ========== */
