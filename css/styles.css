@@ -437,7 +437,7 @@ button {
 
 .customers-list:hover .customers-link-icon,
 .customers-list:focus .customers-link-icon {
-  fill: var(--link-hover);
+  fill: currentColor;
 }
 
 /* ========== /CUSTOMERS ========== */
