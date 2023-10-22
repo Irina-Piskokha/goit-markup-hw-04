@@ -417,25 +417,27 @@ button {
   justify-content: center;
   align-items: center;
   color: var(--link-gray);
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link-icon {
   fill: #8e8f99;
   transition-property: fill;
-}
-
-.customers-list:hover,
-.customers-list:focus {
-  border: 1px solid var(--link-hover);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 .customers-list:hover .customers-link-icon,
 .customers-list:focus .customers-link-icon {
   fill: var(--link-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========== /CUSTOMERS ========== */
