@@ -530,7 +530,7 @@ button {
   height: 100%;
 }
 
-.overlay {
+.overlay-wrap {
   position: relative;
   overflow: hidden;
 }
